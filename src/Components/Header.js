@@ -1,9 +1,9 @@
 import React from 'react'
-
+import {LOGO} from '../Utils/constents' //this curly bracess is imp here
 function Header() {
   return (
     <div className='h-24 w-full absolute z-[999]'>
-     <img className='w-[16vw]' src='https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png'/>
+     <img className='w-[16vw]' src={LOGO}/>
     </div>
   )
 }
