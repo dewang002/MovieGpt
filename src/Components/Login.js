@@ -76,7 +76,7 @@ function Login() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative h-[100vh] w-full bg-black">
       <Header />
       <div className="h-[88vh] w-full ">
         <img
