@@ -5,7 +5,7 @@ import { addPopular } from "../Utils/movieSlice";
 
 function usePopular() {
   let dispatch = useDispatch();
-  const popular = useSelector(state=>state.movies.popularVideo)
+  const popular = useSelector(state=>state.movies?.popularVideo)
   const popularMovie = async () => {
     const data = await fetch(
       "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1",

@@ -5,7 +5,7 @@ import { API_options } from "../Utils/constents";
 
 function MovieTrailer(movieId) {
   const dispatch = useDispatch();
-  const trailer = useSelector(state=>state.movies.trailerVideo)
+  const trailer = useSelector(state=>state.movies?.trailerVideo)
   const getmovietraler = async () => {
     const data = await fetch(
       `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`,
