@@ -31,7 +31,7 @@ function Body() {
     });
   }, []);
   return (
-    <div className="bg-black">
+    <div className="bg-black h-[140vh]">
       <RouterProvider router={approute} />
     </div>
   );

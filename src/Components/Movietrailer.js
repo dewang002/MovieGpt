@@ -8,7 +8,7 @@ function Movietrailer() {
   const { title, overview, release_date,id } = movie[0]; //math.random vala logic laga lena
 
   return (
-    <div className="w-full h-[100vh] overflow-x-hidden">
+    <div className="w-full [100vh]  overflow-x-hidden">
       <VideoTitle title={title} overview={overview}  date={release_date} />
       <Videotrailer movieId={id} />
     </div>

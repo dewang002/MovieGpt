@@ -9,7 +9,7 @@ function SecondaryContainer() {
   return (
     <div className='h-screen w-[100%] '>
 
-      <div className='-mt-52 z-20 relative flex flex-col gap-10'>
+      <div className='-mt-72 md:-mt-52 z-20 pl-4 pb-8 overflow-hidden bg-black relative flex flex-col gap-10'>
       <Movielist title={"now playing"} movelist={movelist.nowPlaying}  />
       <Movielist title={"popular"} movelist={movelist.popularVideo}  />
       <Movielist title={"Top Movies"} movelist={movelist.nowPlaying}  />

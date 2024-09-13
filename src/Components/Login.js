@@ -90,7 +90,7 @@ function Login() {
 
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="text-center overflow-hidden text-white h-[40vw] w-3/12 px-14 pt-8 absolute top-0 left-1/3 my-[5vw] bg-zinc-900 bg-opacity-95 rounded"
+        className="text-center overflow-hidden text-white h-[80vh] w-full md:h-[40vw] md:w-3/12 px-14 pt-8 absolute top-0 md:left-1/3 md:my-[5vw] my-[20vw] bg-zinc-900 bg-opacity-95 rounded"
       >
         <h1 className="text-white text-left text-3xl pb-4 font-bold">
           {togglesignin ? "Sign In" : "Sign up"}

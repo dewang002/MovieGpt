@@ -9,7 +9,7 @@ function Videotrailer({ movieId }) {
   return (
     <div className="h-screen w-screen">
       <iframe
-        className="h-[100vh] w-[110vw] "
+        className="md:h-[100vh] h-[50vh] w-[110vw] "
         src={`https://www.youtube.com/embed/${playtrailer?.key}?autoplay=1&loop=1&mute=1`}
         title="YouTube video player"
         allow="accelerometer; web-share"
