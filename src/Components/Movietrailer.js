@@ -4,7 +4,7 @@ import VideoTitle from "./VideoTitle";
 import Videotrailer from "./Videotrailer"
 function Movietrailer() {
   const movie = useSelector((state) => state.movies?.nowPlaying); //?. this is a way to say if it have come then look for this  
-  if (movie===null) return;
+  if (!movie || movie.length===0) return;
   const { title, overview, release_date,id } = movie[0]; //math.random vala logic laga lena
 
   return (
