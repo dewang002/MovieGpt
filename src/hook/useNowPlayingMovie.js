@@ -1,5 +1,5 @@
 //⭐ name of a hook always start with 'use'
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { API_options } from "../Utils/constents";
 import { addMovie } from "../Utils/movieSlice";
@@ -18,7 +18,7 @@ function useNowPlayingMovie() {
     
       useEffect(() => {
        !playmovie && get_movie_api();
-      }, []);
+      }, [playmovie,get_movie_api]);
   
 }
 

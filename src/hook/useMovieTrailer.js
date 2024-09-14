@@ -19,7 +19,7 @@ function MovieTrailer(movieId) {
 
   useEffect(() => {
    !trailer && getmovietraler();
-  }, []);
+  }, [trailer,getmovietraler]);
 }
 
 export default MovieTrailer;

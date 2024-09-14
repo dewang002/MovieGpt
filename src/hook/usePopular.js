@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { API_options } from "../Utils/constents";
 import { addPopular } from "../Utils/movieSlice";
@@ -16,7 +16,7 @@ function usePopular() {
   };
   useEffect(() => {
    !popular && popularMovie();
-  }, []);
+  }, [popular,popularMovie]);
 }
 
 export default usePopular;

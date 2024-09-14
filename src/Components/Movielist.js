@@ -1,5 +1,4 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import Moviecard from "./Moviecard";
 
 function Movielist({ title,movelist }) {
