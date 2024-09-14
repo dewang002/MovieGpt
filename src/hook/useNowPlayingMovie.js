@@ -9,7 +9,7 @@ function useNowPlayingMovie() {
     const playmovie = useSelector(state=>state.movies?.nowPlaying)
     const get_movie_api = async () => {
         const data = await fetch(
-          "https://api.themoviedb.org/3/movie/now_playing?page=1",
+          `https://api.themoviedb.org/3/movie/now_playing?api_key=c6f27dfbb26022d5fa7e98bfe41bcf06&page=1`,
           API_options
         );
         const json = await data.json();
@@ -19,6 +19,7 @@ function useNowPlayingMovie() {
       useEffect(() => {
        !playmovie && get_movie_api();
       }, [playmovie,get_movie_api]);
+      
   
 }
 

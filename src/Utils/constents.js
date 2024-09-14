@@ -7,8 +7,8 @@ export const Poster ='https://image.tmdb.org/t/p/w300'
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer '+ process.env.REACT_APP_TMDBKEY
-    }
+      Authorization: 'Bearer '+process.env.REACT_APP_TMDBKEY
+    },
   };
 
   export const langOpt =[
