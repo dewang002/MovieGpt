@@ -10,7 +10,7 @@ const useHandlegpt = (searchtxt) => {
 
   const searchMoviesGPT = async (movies) => {
     const data = await fetch(
-      `https://api.themoviedb.org/3/search/movie?query=${movies}&include_adult=false&language=en-US&page=1`,
+      `https://api.themoviedb.org/3/search/movie?query=${movies}&include_adult=false&language=en-US&page=1&${process.env.REACT_APP_AUTH_KEY}`,
       API_options
     );
     const json = await data.json();
@@ -27,10 +27,13 @@ const useHandlegpt = (searchtxt) => {
       const chatCompletion = await axios({
         url: process.env.REACT_APP_KEY,
         method: "post",
-        data: {contents: [{ parts: [{ text: searchKey }] }]},
+        data: { contents: [{ parts: [{ text: searchKey }] }] },
       });
 
-      const moviess = chatCompletion.data?.candidates?.[0]?.content?.parts[0]?.text.split(",");
+      const moviess =
+        chatCompletion.data?.candidates?.[0]?.content?.parts[0]?.text.split(
+          ","
+        );
       const movieDataRequests = moviess.map((movie) => searchMoviesGPT(movie));
       const movieData = await Promise.all(movieDataRequests);
 
@@ -44,4 +47,3 @@ const useHandlegpt = (searchtxt) => {
 };
 
 export default useHandlegpt;
-
