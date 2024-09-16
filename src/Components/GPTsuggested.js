@@ -5,7 +5,6 @@ import Movielist from "./Movielist";
 function GPTsuggested({loading}) {
   const move = useSelector((state) => state.search);
   const { GPTmoviesresult, GPTmoviesname } = move;
-  console.log(GPTmoviesname, GPTmoviesresult);
   if(loading){
     return( 
         <div className="md:flex flex-col md:flex-row md:gap-16 md:flex-wrap">

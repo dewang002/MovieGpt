@@ -8,10 +8,8 @@ function SignInWithGoogle({ seterrmessage }) {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
-        // console.log(result);
       })
       .catch((error) => {
-        // console.log(error)
         const errorMessage = error.message;
         seterrmessage(errorMessage);
       });
